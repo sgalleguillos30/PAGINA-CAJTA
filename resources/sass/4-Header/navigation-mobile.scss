@@ -1,0 +1,181 @@
+@import "../2-Variables/variables";
+@import "../3-Mixins/mixins";
+
+.header-navbar-mobile {
+
+    @media only screen and (max-width: 700px) {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        overflow: hidden;
+
+        .wrap {
+            padding: 0 10px;
+        }
+    }
+
+    display: none;
+    margin: 0 auto 20px;
+    background: {
+        @include Background( #FFF );
+    }
+    border-bottom: $border-bottom-box;
+    position: relative;
+    bottom: 50px;
+    margin-bottom: 0;
+    height: 50px;
+
+
+    h1.logo {
+        width: 140px;
+        height: 31px;
+        margin: 0 0 19px;
+
+        a img {
+            width: 140px;
+            height: 40.5px;
+            padding: 0px 0px 10px
+        }
+    }
+
+
+    a.trigger {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 0;
+        text-indent: -9999;
+
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        span,
+        span:before,
+        span:after {
+            content: "";
+            height: 2px;
+            background-color: #333;
+            display: block;
+            width: 70%;
+            position: relative;
+            margin: 0 auto;
+
+            transition: all 0.3s ease-in-out;
+        }
+
+        span:before,
+        span:after {
+            width: 100%;
+        }
+
+        span:before {
+            top: 10px;
+        }
+
+        span:after {
+            bottom: 12px;
+
+        }
+
+        &.is-open span {
+            background: transparent;
+        }
+
+        &.is-open span:before,
+        &.is-open span:after {
+            background: #FFF;
+            transform-origin: center;
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        &.is-open span:before {
+            transform: rotate(-45deg);
+        }
+
+
+        &.is-open,
+        &:active {
+            background-color: $color-azul;
+            color: #FFF;
+            text-decoration: none;
+        }
+    }
+
+    .menu-principal-mobile {
+        opacity: 0;
+        color: #FFF;
+        background: {
+            @include Background( $color-azul );
+        }
+        padding-bottom: 1px;
+
+        transform: translate(100%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-principal-mobile.is-open {
+        opacity: 1;
+        transform: translate(0%);
+    }
+
+    nav ul li {
+        border-bottom: 1px solid #52A8F1;
+
+        &:last-child {
+            border-bottom: medium none;
+        }
+
+        a {
+            display: block;
+            padding: 8px 10px;
+
+            &:active,
+            &:hover {
+                background: {
+                    @include Background( #0B4E85 );
+                }
+                color: #FFF;
+            }
+        }
+
+        ul.sub-menu {
+            border-top: 1px solid #1384E3;
+            padding: 0;
+            margin: 0;
+
+            li {
+                border-bottom: 1px solid #1384E3;
+
+                a {
+                    padding-left: 40px;
+                    cursor: pointer;
+                }
+
+                ul.sub-menu {
+                    border-top: 1px solid #1384E3;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        border-bottom: 1px solid #1384E3;
+
+                        a {
+                            padding-left: 80px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-navbar-mobile.is-open {
+    height: auto;
+}

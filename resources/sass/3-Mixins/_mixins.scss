@@ -1,0 +1,42 @@
+@mixin contenidoItem( $foto ) {
+    background: {
+        image: url($foto);
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+}
+
+
+@mixin Background( $color ) {
+    color: $color;
+    image: none;
+    repeat: repeat;
+    attachment: scroll;
+    position: 0% 0%;
+    clip: border-box;
+    origin: padding-box;
+    size: auto auto;
+}
+
+
+@mixin BandaBicolor( $width , $color , $float , $height ) {
+    background-color: $color;
+    width: $width;
+    display: block;
+    height: $height;
+    float: $float;
+}
+
+
+@mixin RedSocial-Mosaico ( $bg-position, $bg-position-hover ) {
+    .icono {
+        background-position: $bg-position;
+    }
+
+    &:hover {
+        .icono {
+            background-position: $bg-position-hover;
+        }
+    }
+}

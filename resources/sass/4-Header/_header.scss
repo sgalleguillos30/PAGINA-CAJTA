@@ -1,0 +1,139 @@
+@import "../3-Mixins/mixins";
+
+header {
+    margin-bottom: 25px;
+
+    @media only screen and (max-width: 700px) {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .header-container {
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        & img {
+            height: 180px;
+            weight: 180px;
+            max-height: auto;
+            max-width: auto;
+            left: 0;
+
+            @media ( max-width: 600px ){
+                height: 140px;
+                width: 140px;
+            }
+        }
+
+        & h2, h3, img {
+            position: absolute;
+        }
+
+        & h2 {
+            padding-left: 220px;
+            padding-top: 15px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 1px #000;
+            font-size: 30px;
+
+            @media ( max-width: 600px ){
+                font-size: 20px;
+                text-align: center;
+                padding: 0 10px 0 180px;
+                margin-top: 10px;
+            }
+        }
+
+        & h3 {
+            padding-left: 220px;
+            padding-top: 85px;
+            color: white;
+            text-shadow: 2px 2px 1px #000;
+            font-size: 25px;
+            font-weight: bold;
+
+            @media ( max-width: 600px ){
+                font-size: 20px;
+                text-align: center;
+                padding: 0 10px 0 150px;
+                margin: 110px 0 110px 60px;
+            }
+        }
+    }
+
+    .carousel-caption h4 {
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #000;
+        font-family: 'gobCL', 'Open Sans';
+    }
+} /* header */
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .next.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d( 0, 0, 0 );
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+    height: 300px;
+}
+
+.item:nth-child(1) {
+    @include contenidoItem( "../images/Ciudad/Iquique.jpg" );
+}
+
+.item:nth-child(2) {
+    @include contenidoItem( "../images/Ciudad/Antofagasta.jpg" );
+}
+
+.item:nth-child(3) {
+    @include contenidoItem( "../images/Ciudad/Arica.jpg" );
+}
+
+
+.carousel-indicators {
+    bottom: 38px;
+    left:80px;
+
+    @media only screen and (max-width: 700px) {
+        bottom: 38px;
+        left:25px;
+    }
+}
+
+.carousel-caption {
+    padding-bottom: 50px;
+}

@@ -1,0 +1,240 @@
+@import '../2-Variables/variables';
+
+.sidebar {
+    width: 320px;
+    margin: 0 0 0 20px;
+    float: left;
+
+    @media only screen and (max-width: 1040px) {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .redes-lista {
+        margin: 0 auto 15px;
+        font-size: 14px;
+
+        @media only screen and (max-width: 1040px) {
+            width: 320px;
+            float: left;
+            margin: 0 20px 0 0;
+        }
+
+        ul li {
+            margin: 0 auto 8px;
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 5px;
+                border-bottom: $border-bottom-box;
+                color: #475156;
+                background-color: #FFF;
+
+                &:hover {
+                    color: #FFF;
+                }
+
+                span {
+                    display: block;
+                    float: left;
+                    padding: 5px 0 0;
+
+                    &.icono {
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 12px 0 0;
+                        background-image: url('../images/lista-redes-sprite-2x.png');
+                        background-size: 330px auto;
+                    }
+                }
+                .texto {
+                    .red {
+                        font-weight: 700;
+                        margin: 0 5px 0 0;
+                    }
+
+                    .usuario {
+                        font-style: italic;
+                        color: #7A8791;
+                    }
+                }
+            }
+
+            &.facebook a {
+                .icono {
+                    background-position: 0 0;
+                }
+
+                &:hover {
+                    background: #0070BB;
+                    border-bottom: 2px solid #00426e;
+
+                    .texto .red,
+                    .texto .usuario {
+                        color: #FFF;
+                    }
+
+                    span.icono {
+                        background-position: 0px -30px;
+                    }
+                }
+            }
+
+            &.youtube a {
+                .icono {
+                    background-position: -90px 0px;
+                }
+
+                &:hover {
+                    background: #E52C26;
+                    border-bottom: 2px solid #aa1914;
+
+                    .texto .red,
+                    .texto .usuario {
+                        color: #FFF;
+                    }
+
+                    span.icono {
+                        background-position: -90px -30px;
+                    }
+                }
+            }
+
+            &.instagram a {
+                .icono {
+                    background-position: -120px 0;
+                }
+
+                &:hover {
+                    background: #3f6d94;
+                    border-bottom: 2px solid #28455e;
+
+                    .texto .red,
+                    .texto .usuario {
+                        color: #FFF;
+                    }
+
+                    span.icono {
+                        background-position: -120px -30px;
+                    }
+                }
+            }
+
+            &.twitter a {
+                .icono {
+                    background-position: -30px 0;
+                }
+
+                &:hover {
+                    background: #3FA9F5;
+                    border-bottom: 2px solid #0b85dc;
+
+                    .texto .red,
+                    .texto .usuario {
+                        color: #FFF;
+                    }
+
+                    span.icono {
+                        background-position: -30px -30px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ************** */
+    /* ************** */
+
+    .widget-centros-atencion {
+        width: 320px;
+        float: left;
+        margin: 0 auto 8px;
+
+        @media only screen and (max-width: 1040px) {
+            width: 320px;
+            float: left;
+            margin: 0 20px 8px 0;
+        }
+
+        .trigger {
+            width: 100%;
+            display: block;
+            background: #FFF;
+            border-bottom: $border-bottom-box;
+            padding: 14px 10px 8px 15px;
+            font-family: $font-family;
+            cursor: pointer;
+
+            &:hover {
+                span.icono {
+                    background-position: top right;
+                }
+            }
+
+            &.on {
+                span.icono {
+                    background-position: bottom left;
+                }
+            }
+
+            &.on {
+                &:hover {
+                    span.icono {
+                        background-position: bottom right;
+                    }
+                }
+            }
+
+
+            .icono {
+                display: block;
+                float: right;
+                width: 20px;
+                height: 20px;
+                margin-top: -5px;
+                background: {
+                    image: url('../images/widget-trigger-icono.png');
+                    repeat: no-repeat;
+                    size: 40px 40px;
+                    position: top left;
+                }
+
+            }
+        }
+
+        .lista-centros-atencion {
+            background-color: #7a8791;
+            color: #fff;
+            max-height: 250px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            ul li {
+                a {
+                    display: block;
+                    padding: 0 10px;
+
+                    &:hover {
+                        background-color: #475156;
+                        color: #FFF;
+                        font-weight: bold;
+                    }
+
+                    span {
+                        display: block;
+                        padding: 10px;
+                        border-bottom: 1px solid #96a0a8;
+                        font-size: 14px;
+
+                        &:hover {
+                            border-bottom-color: transparent;
+                            transition: border-bottom-color 0s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} // Sidebar

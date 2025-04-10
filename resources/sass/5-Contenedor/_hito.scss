@@ -1,0 +1,107 @@
+.post.page-hito {
+    background: 0 0;
+    font-family: $font-family;
+
+    .post-header {
+        // height: auto;
+        height: 220px;
+        padding: 0;
+        width: 100%;
+        color: #FFF;
+        background-repeat: no-repeat;
+        padding: 5px 30px 30px;
+        background-color: #8fbae0;
+        border: 8px solid #3977a6;
+
+        .top {
+            padding: 100px 5px 0;
+            height: 220px;
+
+            h4 {
+                font-weight: 700;
+            }
+
+            h3 {
+                margin: 0 auto;
+            }
+        }
+
+        .bottom {
+            padding: 0 0 19px;
+            background: #fff;
+            border-bottom: 2px solid #BDC9D1;
+        }
+    }
+
+    .texto {
+        margin: 20px 0 0;
+        padding: 0;
+
+        // @media only screen and (max-width: 700px) {
+        // 	padding: 20px 15px 20px;
+        // }
+
+        .contenido {
+            color: #475156;
+
+            .hito {
+                background: #fff !important;
+                padding: 25px 0;
+                border-bottom: 2px solid #BDC9D1;
+                margin: 0 0 20px;
+
+                .titulo {
+                    padding: 5px 35px;
+                    float: left;
+                    width: 200px;
+
+                    @media only screen and (max-width: 700px) {
+                        width: 100%;
+                        padding: 5px 20px 10px;
+                        margin-bottom: 20px;
+                        border-bottom: 1px solid #EEE;
+                    }
+
+                    h4 {
+                        margin: 0;
+                        line-height: 130%;
+                    }
+                }
+
+                .cuerpo {
+                    padding: 0 30px 0 0;
+                    float: left;
+                    width: 460px;
+
+                    @media only screen and (max-width: 700px) {
+                        width: 100%;
+                        padding: 0 20px;
+                    }
+
+                    p {
+                        margin: 0 0 20px;
+                        text-align: justify;
+                    }
+
+                    dl dt,
+                    dl dd {
+                        text-align: justify;
+                        line-height: 180%;
+                    }
+
+                    dd {
+                        list-style-type: square;
+                    }
+
+                    a {
+                        @media only screen and (max-width: 700px) {
+                            width: 100%;
+                            text-align: center;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.banners {
+    &.banners-mosaico {
+        width: 1020px;
+        margin: 45px auto 10px;
+
+        @media only screen and (max-width: 1040px) {
+            width: 680px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            width: 320px;
+        }
+
+        .banner-imagen {
+            float: left;
+            margin: 0 20px 20px 0;
+
+            a {
+                color: #f2f2f2;
+
+                img {
+                    float: none;
+                    background-color: #fff;
+
+                    &:hover {
+                        background-color: transparent;
+                        transition: background-color .1s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

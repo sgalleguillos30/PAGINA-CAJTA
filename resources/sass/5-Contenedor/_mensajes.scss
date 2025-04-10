@@ -1,0 +1,46 @@
+@import '../2-Variables/variables';
+@import '../3-Mixins/mixins';
+
+.alerta {
+    width: 100%;
+    margin-bottom: 40px;
+
+    .msgbicolor {
+        height: 2px;
+        min-height: 1px;
+
+        .rojo {
+            @include BandaBicolor( 54%, #EB3646, left, 2px );
+        }
+
+        .azul {
+            @include BandaBicolor( 46%, #0F69B4, left, 2px );
+        }
+    }
+
+    .alerta-mensaje {
+        color: black;
+        padding: 10px 10px 10px 5px;
+        border-bottom: 2px solid #BDC9D1;
+        background: {
+            @include Background( #FFF );
+        }
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background: {
+                @include Background( #F2F2F2 );
+            }
+        }
+
+        p {
+            margin: 5px 10px 10px !important;
+            text-align: justify;
+        }
+
+        h3, h4, h5 {
+            color: $color-gris-texto;
+            margin: 25px auto;
+        }
+    }
+}

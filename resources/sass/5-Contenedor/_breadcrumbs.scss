@@ -1,0 +1,20 @@
+@import '../2-Variables/variables';
+
+.breadcrumbs {
+    margin: 0 0 14px;
+    color: #475156;
+    max-width: 600px;
+    font-family: $font-family-open;
+
+    @media only screen and (max-width: 700px) {
+        width: 100%;
+    }
+
+    ul li {
+        float: left;
+
+        &.sep {
+            margin: 0 5px;
+        }
+    }
+}

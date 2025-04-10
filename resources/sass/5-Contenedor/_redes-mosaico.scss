@@ -1,0 +1,88 @@
+@import '../2-Variables/variables';
+@import '../3-Mixins/mixins';
+
+.redes-mosaico {
+    padding: 25px 0;
+    margin: 0 auto 10px;
+    color: $color-gris-texto;
+
+    @media only screen and (max-width: 1040px)  {
+        display: none;
+        visibility: hidden;
+    }
+
+    h4 {
+        color: $color-gris-texto;
+        float: left;
+        margin: 0 25px 0 0;
+        padding: 10px 0 0;
+        font-size: 17px;
+    }
+
+
+    ul li {
+        float: left;
+        margin: 0 20px 0 10px;
+        font-family: $font-family-open;
+
+        &.twitter {
+            a {
+                @include RedSocial-Mosaico( -30px 0 , -30px -60px );
+            }
+        }
+
+        &.facebook {
+            a {
+                @include RedSocial-Mosaico( 0px 0 , 0px -60px );
+            }
+        }
+
+        &.instagram {
+            a {
+                @include RedSocial-Mosaico( -120px 0 , -120px -60px );
+            }
+        }
+
+        &.youtube {
+            a {
+                @include RedSocial-Mosaico( -90px 0 , -90px -60px );
+            }
+        }
+
+        a {
+            display: block;
+
+            span {
+                display: block;
+            }
+
+            span.icono {
+                background-image: url('../images/lista-redes-sprite-2x.png');
+                background-size: 330px auto;
+                width: 30px;
+                height: 30px;
+                float: left;
+                margin: 5px 10px 0 0;
+            }
+
+            .texto {
+                float: left;
+                padding-top: 3px;
+
+                span {
+                    line-height: 130%;
+                }
+
+                span.red {
+                    font-size: 15px;
+                    color: #2E353A;
+                }
+
+                span.usuario {
+                    font-size: 10px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

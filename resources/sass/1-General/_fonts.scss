@@ -1,0 +1,121 @@
+@import "../2-Variables/variables";
+
+@font-face {
+    font-family: 'gobCL';
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url("../fonts/gobCLfonts/gobcl_light.eot?") format("eot"),
+        url("../fonts/gobCLfonts/gobcl_light.woff") format("woff"),
+        url("../fonts/gobCLfonts/gobcl_light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "gobCL";
+    font-weight: 500;
+    font-style: normal;
+    src:
+            url("../fonts/gobCLfonts/gobcl_regular.eot?") format("eot"),
+            url("../fonts/gobCLfonts/gobcl_regular.woff") format("woff"),
+            url("../fonts/gobCLfonts/gobcl_regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "gobCL";
+    font-weight: 700;
+    font-style: normal;
+    src:
+            url("../fonts/gobCLfonts/gobcl_bold.eot?") format("eot"),
+            url("../fonts/gobCLfonts/gobcl_bold.woff") format("woff"),
+            url("../fonts/gobCLfonts/gobcl_bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "gobCL";
+    font-weight: 900;
+    font-style: normal;
+    src:
+            url("../fonts/gobCLfonts/gobcl_heavy.eot?") format("eot"),
+            url("../fonts/gobCLfonts/gobcl_heavy.woff") format("woff"),
+            url("../fonts/gobCLfonts/gobcl_heavy.ttf") format("truetype");
+}
+
+.gobcl {
+    font-family: "gobCL", Tahoma, Verdana, Segoe, sans-serif !important;
+}
+
+.opensans {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.georgia {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+    font-family: "gobCL",Tahoma,Verdana,Segoe,sans-serif;
+}
+
+h1 {
+    font-size: 14px;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+
+h2 {
+    font-size: 45px;
+    line-height: 1.1em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 1.1em;
+    font-weight: 500;
+}
+
+.tituloh3 {
+    @media only screen and (max-width: 700px){
+        font-size: 25px;
+    }
+}
+
+
+h4 {
+    font-size: 22px;
+    line-height: 1.2em;
+    font-weight: 500px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 1em;
+    font-weight: 500;
+
+    &.titulo-seccion {
+        margin: 0 auto 15px;
+
+        @media only screen and (max-width: 700px) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.tituloh5 {
+    margin: 0px 0px 12px;
+    color: $color-azul;
+}

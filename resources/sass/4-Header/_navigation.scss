@@ -1,0 +1,161 @@
+@import "../2-Variables/variables";
+@import "../3-Mixins/mixins";
+
+.header-navbar {
+    position: absolute;
+    z-index: 10;
+    width: 1000px;
+    margin: 0 auto;
+    top: 250px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+
+    @media only screen and (max-width: 1040px){
+        max-width: 660px;
+    }
+
+    @media only screen and (max-width: 700px) {
+        display: none;
+    }
+
+    nav.menu-principal {
+        color: $color-gris-texto;
+        font-family: $font-family;
+        width: 100%;
+        display: table;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        font-size: 14px;
+        line-height: 1;
+        z-index: 3;
+
+        ul {
+            background: {
+                @include Background( #FFF );
+            }
+
+            display: table-row;
+            padding: 0px;
+            margin: 0px;
+
+            li {
+                margin: 0;
+                display: table-cell;
+                text-align: center;
+                position: relative;
+                padding: 0;
+
+
+                a {
+                    height: 50px;
+                    padding: 18px 0 12px;
+                    display: block;
+                    border-right: 1px solid #E6E6E6;
+                    border-bottom: $border-bottom-box;
+                }
+                a.current {
+                    color: $color-azul;
+                    border-bottom: 2px solid $color-azul;
+                }
+
+                &:hover {
+                    a {
+                        color: $color-azul;
+                        border-bottom: 2px solid $color-azul;
+                        text-decoration: none;
+                    }
+
+                    .sub-menu {
+                        display: block;
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        border-right: none;
+                    }
+                }
+            }
+
+
+            ul.sub-menu {
+                position: absolute;
+                z-index: 9;
+                background: {
+                    @include Background( $color-azul );
+                }
+                width: 100%;
+                display: none;
+                padding: 0;
+                margin: 0;
+
+
+                li {
+                    float: none;
+                    text-align: center;
+                    border-bottom: 1px solid #3091C1;
+                    display: block;
+
+                    &:hover {
+                        ul.sub-menu {
+                            display: block;
+                        }
+                    }
+
+
+                    a {
+                        padding: 10px 5px;
+                        color: #FFF;
+                        border: medium none;
+                        font-size: 12px;
+                        height: auto;
+
+                        &:hover {
+                            background: {
+                                @include Background( $color-azul-hover );
+                            }
+                        }
+                    }
+                }
+
+                ul.sub-menu {
+                    position: absolute;
+                    z-index: 9;
+                    background: {
+                        @include Background( $color-azul );
+                    }
+                    width: 100%;
+                    display: none;
+                    padding: 0;
+                    margin: 0;
+                    left: 100%;
+                    top: 0;
+
+                    li {
+                        float: none;
+                        text-align: center;
+                        border: 1px solid #3091C1;
+                        display: block;
+
+                        a {
+                            padding: 10px 5px;
+                            color: #FFF;
+                            border: medium none;
+                            font-size: 12px;
+                            height: auto;
+
+                            &:hover {
+                                background: {
+                                    @include Background( $color-azul-hover );
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
