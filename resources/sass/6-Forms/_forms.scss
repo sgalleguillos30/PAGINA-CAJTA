@@ -1,0 +1,24 @@
+form {
+    font-size: 14px;
+    font-family: "Open Sans", "gobCL", sans-serif;
+
+}
+
+
+.form-group,
+.form-control,
+.control-label {
+    font-size: 14px;
+    font-family: "Open Sans", "gobCL", sans-serif;
+    padding-bottom: 6px;
+
+    select {
+        font-size: 15px;
+        font-family: "Open Sans", "gobCL", sans-serif;
+    }
+}
+
+
+.form-control {
+    height: calc(1.5em + 0.75rem + 10px);
+}

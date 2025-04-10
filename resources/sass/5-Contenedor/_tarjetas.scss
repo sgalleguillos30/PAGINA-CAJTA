@@ -1,0 +1,75 @@
+@import '../2-Variables/variables';
+
+.main {
+    .stream-tarjeta {
+        margin: 0 auto 15px;
+
+        .tarjeta {
+            border-bottom: 2px solid #BDC9D1;
+            margin: 0 0 20px;
+
+            .pic {
+                width: 170px;
+                height: 170px;
+                float: left;
+                position: relative;
+
+                @media only screen and (max-width: 700px) {
+                    display: none;
+                    visibility: hidden;
+                }
+
+                a img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .texto {
+                width: 490px;
+                padding: 20px 20px 10px;
+                float: left;
+
+                @media only screen and (max-width: 700px) {
+                    width: 100%;
+                    padding: 20px 15px 10px;
+                }
+
+                h4 {
+                    margin: 0 0 10px;
+                    padding: 0;
+                    border-bottom: none;
+                    color: $color-azul;
+                }
+
+                h5.cargo {
+                    margin: 0 0 3px;
+                    color: #475156;
+                }
+
+                h5.institucion {
+                    margin: 0 0 35px;
+                    color: #7A8791;
+                }
+
+                .links {
+                    a {
+                        display: block;
+                        float: left;
+                        color: #0f69b4;
+                        font-size: 12px;
+                        margin: 5px 0 0;
+                        font-family: $font-family-open;
+                        padding: 0 7px;
+                        border-left: 1px solid #0f69b4;
+
+                        &:first-child {
+                            border-left: none;
+                            padding: 0 7px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

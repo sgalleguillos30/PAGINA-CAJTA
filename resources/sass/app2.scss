@@ -1,0 +1,27 @@
+@import '1-General/fonts';
+@import '1-General/global';
+
+@import '2-Variables/variables';
+
+@import '3-Mixins/mixins';
+
+@import '4-Header/header';
+@import '4-Header/navigation';
+@import '4-Header/navigation-mobile';
+
+@import '5-Contenedor/contenedor-principal';
+@import '5-Contenedor/sidebar';
+@import '5-Contenedor/banner';
+@import '5-Contenedor/sobre-nosotros';
+@import '5-Contenedor/prefooter';
+@import '5-Contenedor/redes-mosaico';
+@import '5-Contenedor/tarjetas';
+@import '5-Contenedor/hito';
+@import '5-Contenedor/breadcrumbs';
+@import '5-Contenedor/mensajes';
+@import '5-Contenedor/listas-buttons';
+@import '5-Contenedor/footer';
+@import '5-Contenedor/galeria-imagenes';
+@import '5-Contenedor/buscador';
+
+@import '6-Forms/forms';
