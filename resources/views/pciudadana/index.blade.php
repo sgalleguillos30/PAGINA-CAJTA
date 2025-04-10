@@ -27,7 +27,7 @@
                 <p>
                     Documentos:
                     <ul class="opensans">
-                        <li><a href="{{ asset('assets/docs/partciudadana/general/NormaGeneralParticipacionCiudadana02.pdf') }}" class="blue opensans" target="_blank">Norma General de la Participación Ciudadana</a></li>
+                        <li><a href="{{ asset('assets/docs/partciudadana/general/NormaGeneralParticipacionCiudadana03.pdf') }}" class="blue opensans" target="_blank">Norma General de la Participación Ciudadana</a></li>
                         <li><a href="{{ asset('assets/docs/partciudadana/general/res_exenta_1010-2018.pdf') }}" class="blue opensans" target="_blank">Resolución Exenta 1010/2018 - Modifica Resolución 051/2015 que Norma General de la Participación Ciudadana</a></li>
                         <li><a href="{{ asset('assets/docs/partciudadana/general/NormaEspecificaParticipacionCiudadanaCAJTA.pdf') }}" class="blue opensans" target="_blank">Norma específica de la Participación Ciudadana</a></li>
                         <li><a href="{{ asset('assets/docs/partciudadana/general/res520_Abril2018.pdf') }}" class="blue opensans" target="_blank">Resolución Exenta 520</a></li>
