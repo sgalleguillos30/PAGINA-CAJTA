@@ -13,7 +13,7 @@
         <div class="mb-5">
             {{--<a href="https://cajta.cl/participacion-ciudadana/cuentas-publicas">--}}
                 <img class="img-responsive"
-                    src="{{ asset('assets/images/Banners/CAMPANAS/2025/mes-pueblo-originario.png') }}"
+                    src="{{ asset('assets/images/Banners/CAMPANAS/2025/mes-del-trabajador.png') }}"
                     style="width: 660px; border: 0.5px solid #999999; box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);" />
                 {{--</a>--}}
         </div>
